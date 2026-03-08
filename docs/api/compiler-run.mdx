@@ -1,0 +1,42 @@
+---
+title: "Get User"
+api: "GET https://api.mintlify.com/user"
+description: "This endpoint returns the details of a user."
+---
+
+### Path Parameters
+
+<ParamField path="id" type="string" required>
+  The unique identifier for the user.
+</ParamField>
+
+### Response
+
+<ResponseField name="name" type="string">
+  The name of the user.
+</ResponseField>
+
+<ResponseField name="email" type="string">
+  The email address of the user.
+</ResponseField>
+
+<RequestExample>
+
+```bash
+curl --request GET \
+  --url https://api.mintlify.com/user \
+  --header 'Content-Type: application/json'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane@doe.com"
+}
+```
+
+</ResponseExample>

@@ -1,0 +1,13 @@
+{
+    "name": "my-mintlify-docs",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "mintlify dev"
+    },
+    "devDependencies": {
+        "@mintlify/cli": "latest"
+    },
+    "dependencies": {
+        "comment-parser": "^1.4.5"
+    }
+}

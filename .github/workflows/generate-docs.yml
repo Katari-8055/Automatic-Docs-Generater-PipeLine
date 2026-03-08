@@ -1,0 +1,49 @@
+name: Generate MDX Documentation
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  repository_dispatch:
+    types: [update-docs-event]
+
+permissions:
+  contents: write
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Documentation Generators
+        run: |
+          # 1. Extract JSDoc to JSON
+          node scripts/extract-jsdoc.js
+          
+          # 2. Convert JSDoc JSON to MDX
+          node scripts/json-to-mdx.js
+          
+          # 3. Update Mintlify navigation (mint.json)
+          node scripts/update-mint-navigation.js
+          
+          # 4. Fetch GitHub READMEs as plugins
+          node scripts/fetch-github-readme.js
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs(auto): Update generated MDX documentation and mint.json"
+          # Only commit files in docs/ directories, the JSON output, and the config
+          file_pattern: 'docs/**/*.mdx api-docs.json mint.json'

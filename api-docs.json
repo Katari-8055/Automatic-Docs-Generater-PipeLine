@@ -1,0 +1,44 @@
+[
+  {
+    "file": "src\\example.js",
+    "description": "Adds two numbers together.",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "a",
+        "type": "number",
+        "description": "- The first number."
+      },
+      {
+        "tag": "param",
+        "name": "b",
+        "type": "number",
+        "description": "- The second number."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "number",
+        "description": "sum of a and b."
+      }
+    ]
+  },
+  {
+    "file": "src\\example.js",
+    "description": "Greets a user by name.",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "name",
+        "type": "string",
+        "description": "- The user to greet."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "string",
+        "description": "greeting message."
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+{
+    "name": "My Mintlify Docs",
+    "logo": {
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+        "primary": "#0D9373",
+        "light": "#07C983",
+        "dark": "#0D9373"
+    },
+    "navigation": [
+        {
+            "group": "Getting Started",
+            "pages": [
+                "docs/introduction",
+                "docs/quickstart"
+            ]
+        },
+        {
+            "group": "API Reference",
+            "pages": [
+                "docs/api/compiler-run"
+            ]
+        },
+        {
+            "group": "Examples",
+            "pages": [
+                "docs/example"
+            ]
+        },
+        {
+            "group": "Plugins",
+            "pages": [
+                "docs/plugins/starter",
+                "docs/plugins/webpack"
+            ]
+        }
+    ],
+    "footerSocials": {
+        "github": "https://github.com/mintlify"
+    }
+}
