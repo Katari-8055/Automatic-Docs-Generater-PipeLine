@@ -1,6 +1,6 @@
 [
   {
-    "file": "src\\example.js",
+    "file": "src/example.js",
     "description": "Adds two numbers together.",
     "tags": [
       {
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "file": "src\\example.js",
+    "file": "src/example.js",
     "description": "Greets a user by name.",
     "tags": [
       {

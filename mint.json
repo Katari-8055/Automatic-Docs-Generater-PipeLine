@@ -21,7 +21,9 @@
         {
             "group": "API Reference",
             "pages": [
-                "docs/api/compiler-run"
+                "docs/api/adds-two-numbers",
+                "docs/api/compiler-run",
+                "docs/api/greets-a-user"
             ]
         },
         {
