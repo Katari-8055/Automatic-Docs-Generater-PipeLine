@@ -16,8 +16,27 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout Repository
+      # Step 1: Apna Docs repo checkout karo
+      - name: Checkout Docs Repository
         uses: actions/checkout@v4
+
+      # Step 2: Company ka repo (Testing-Docs) bhi checkout karo ek alag folder me
+      - name: Checkout Company Source Repo (Testing-Docs)
+        uses: actions/checkout@v4
+        with:
+          repository: Katari-8055/Testing-Docs
+          path: company-source
+
+      # Step 3: Company repo ke source files ko apne src/ folder me copy karo
+      - name: Copy Company Source Files
+        run: |
+          mkdir -p src
+          # Company repo ke saare JS files apne src/ me copy karo
+          cp -r company-source/src/* src/ 2>/dev/null || echo "No src/ in company repo, copying all JS files..."
+          # Agar company repo me src/ folder nahi hai toh root se JS files copy karo
+          find company-source -maxdepth 1 -name "*.js" -exec cp {} src/ \;
+          echo "Files in src/ after copy:"
+          ls -la src/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,7 +48,7 @@ jobs:
 
       - name: Run Documentation Generators
         run: |
-          # 1. Extract JSDoc to JSON
+          # 1. Extract JSDoc to JSON (ab company ke code se bhi JSDoc niklega)
           node scripts/extract-jsdoc.js
           
           # 2. Convert JSDoc JSON to MDX
@@ -45,5 +64,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs(auto): Update generated MDX documentation and mint.json"
-          # Only commit files in docs/ directories, the JSON output, and the config
           file_pattern: 'docs/**/*.mdx api-docs.json mint.json'
