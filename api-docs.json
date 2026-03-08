@@ -40,5 +40,83 @@
         "description": "greeting message."
       }
     ]
+  },
+  {
+    "file": "src/index.js",
+    "description": "Subtracts the second number from the first number. This function takes two numeric values as input and returns the result of subtracting the second value from the first. It is commonly used in basic arithmetic operations where the difference between two numbers needs to be calculated. The function expects valid numeric inputs. If non-numeric values are provided, the result may be `NaN` depending on JavaScript's type coercion behavior. Example: subtract(10, 4) // returns 6",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "a",
+        "type": "number",
+        "description": "- The first number (minuend) from which another number will be subtracted."
+      },
+      {
+        "tag": "param",
+        "name": "b",
+        "type": "number",
+        "description": "- The second number (subtrahend) that will be subtracted from the first number."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "number",
+        "description": "difference between the first and second numbers."
+      }
+    ]
+  },
+  {
+    "file": "src/test1.js",
+    "description": "Multiplies two numbers.",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "a",
+        "type": "number",
+        "description": "- The first number."
+      },
+      {
+        "tag": "param",
+        "name": "b",
+        "type": "number",
+        "description": "- The second number."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "number",
+        "description": "result of multiplying a and b."
+      },
+      {
+        "tag": "example",
+        "name": "",
+        "type": "",
+        "description": "multiply(2, 3); // returns 6"
+      }
+    ]
+  },
+  {
+    "file": "src/testing.js",
+    "description": "Adds the second number to the first number. This function takes two numeric values as input and returns the result of adding the second value to the first. It is commonly used in basic arithmetic operations where the sum of two numbers needs to be calculated. The function expects valid numeric inputs. If non-numeric values are provided, the result may be `NaN` depending on JavaScript's type coercion behavior. Example: add(10, 4) // returns 14",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "a",
+        "type": "number",
+        "description": "- The first number (addend) to which another number will be added."
+      },
+      {
+        "tag": "param",
+        "name": "b",
+        "type": "number",
+        "description": "- The second number (addend) that will be added to the first number."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "number",
+        "description": "sum of the first and second numbers."
+      }
+    ]
   }
 ]
