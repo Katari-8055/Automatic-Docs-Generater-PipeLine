@@ -1,0 +1,53 @@
+---
+title: 'Custom API Components Demo'
+description: 'In this page, we are demonstrating the custom React components we just created for our API documentation.'
+---
+
+import { ApiMethod } from '/snippets/ApiMethod.jsx';
+import { ApiParams } from '/snippets/ApiParams.jsx';
+import { ApiExample } from '/snippets/ApiExample.jsx';
+
+## 1. ApiMethod Component
+
+This component displays the HTTP method and the path for an endpoint.
+
+<ApiMethod 
+  method="POST" 
+  path="/v1/users/create" 
+  description="Creates a new user account in the database and returns the generated user object." 
+/>
+
+<ApiMethod 
+  method="GET" 
+  path="/v1/users/:id" 
+  description="Fetches a user account by its unique ID." 
+/>
+
+## 2. ApiParams Component
+
+This component displays the parameters for the API request in a nice table.
+
+<ApiParams params={[
+  { name: 'username', type: 'string', required: true, description: 'A unique handle for the user.' },
+  { name: 'email', type: 'string', required: true, description: 'The user email address used for contact.' },
+  { name: 'age', type: 'integer', required: false, description: 'The user age in years.' }
+]} />
+
+## 3. ApiExample Component
+
+This component shows request and response payloads with syntax highlighting.
+
+<ApiExample 
+  request={{ 
+    username: 'alan_turing', 
+    email: 'alan@example.com',
+    age: 41
+  }} 
+  response={{ 
+    id: 'usr_abc123', 
+    username: 'alan_turing', 
+    email: 'alan@example.com',
+    age: 41,
+    createdAt: '2026-03-10T00:00:00Z'
+  }} 
+/>

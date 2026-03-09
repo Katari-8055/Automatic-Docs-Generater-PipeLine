@@ -34,7 +34,8 @@
         {
             "group": "Examples",
             "pages": [
-                "docs/example"
+                "docs/example",
+                "docs/api-components-demo"
             ]
         },
         {

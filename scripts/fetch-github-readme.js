@@ -4,7 +4,7 @@ const path = require('path');
 // Add the GitHub repositories you want to fetch READMEs from here.
 // Format: 'owner/repo'
 const REPOSITORIES = [
-    'webpack/webpack', // Example repository
+    'Katari-8055/Testing-Docs', // Example repository
     // 'facebook/react',
 ];
 
