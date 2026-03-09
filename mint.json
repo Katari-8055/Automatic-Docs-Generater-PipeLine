@@ -41,7 +41,7 @@
         {
             "group": "Plugins",
             "pages": [
-                "docs/plugins/starter",
+                "docs/plugins/testing-docs",
                 "docs/plugins/webpack"
             ]
         }
