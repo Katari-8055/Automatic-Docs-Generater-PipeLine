@@ -23,7 +23,9 @@
             "pages": [
                 "docs/api/adds-the-second",
                 "docs/api/adds-two-numbers",
+                "docs/api/closes-the-mongodb",
                 "docs/api/compiler-run",
+                "docs/api/connects-the-application",
                 "docs/api/greets-a-user",
                 "docs/api/multiplies-two-numbers",
                 "docs/api/subtracts-the-second"

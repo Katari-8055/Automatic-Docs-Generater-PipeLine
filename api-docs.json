@@ -1,5 +1,47 @@
 [
   {
+    "file": "src/database.js",
+    "description": "Connects the application to the MongoDB database.",
+    "tags": [
+      {
+        "tag": "param",
+        "name": "uri",
+        "type": "string",
+        "description": "- The MongoDB connection URI."
+      },
+      {
+        "tag": "returns",
+        "name": "The",
+        "type": "Promise<object>",
+        "description": "MongoDB connection object."
+      },
+      {
+        "tag": "example",
+        "name": "",
+        "type": "",
+        "description": "connectDatabase(\"mongodb://localhost:27017/mydb\");"
+      }
+    ]
+  },
+  {
+    "file": "src/database.js",
+    "description": "Closes the MongoDB database connection.",
+    "tags": [
+      {
+        "tag": "returns",
+        "name": "Resolves",
+        "type": "Promise<void>",
+        "description": "when the connection is closed."
+      },
+      {
+        "tag": "example",
+        "name": "",
+        "type": "",
+        "description": "closeDatabase();"
+      }
+    ]
+  },
+  {
     "file": "src/example.js",
     "description": "Adds two numbers together.",
     "tags": [
